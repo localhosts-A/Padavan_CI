@@ -65,7 +65,7 @@ on:
       plugins:
         description: 'json format string of include configs'
         required: true
-        default: '{"vpnsvr":"n","vpncli":"n","vpncmd":"n","ss":"y","v2ray":"n","xray":"y","trojan":"y","ssobfs":"y","dnsforwarder":"n","adbyby":"n","adguardhome":"n","smartdns":"n","aliddns":"n","zerotier":"n","ddnsto":"n","wireguard":"n","frpc":"y","aldrive":"n","sqm":"y","mentohust":"n","scutclient":"n","njitclient":"n","minieap":"n","dogcom":"n"}'
+        default: '{"vpnsvr":"n","vpncli":"n","vpncmd":"n","ss":"y","v2ray":"n","xray":"y","trojan":"y","ssobfs":"y","dnsforwarder":"y","adbyby":"n","adguardhome":"y","smartdns":"n","aliddns":"n","zerotier":"n","ddnsto":"n","wireguard":"n","frpc":"y","aldrive":"n","sqm":"y","mentohust":"n","scutclient":"n","njitclient":"n","minieap":"n","dogcom":"n"}'
       usexraymin:
         type: boolean
         description: 'use streamlined xray'
@@ -73,7 +73,7 @@ on:
       customization:
         description: 'json format string of customized configs'
         required: true
-        default: '{"rainbowui":"y","specializedlogo":"n","changebrandlogo":"n","lanip":"192.168.2.1","signaccount":"admin","signpassword":"admin","wifi2gssid":"","wifi5gssid":"","wifi2gpsk":"","wifi5gpsk":""}'
+        default: '{"rainbowui":"y","specializedlogo":"n","changebrandlogo":"n","lanip":"192.168.31.1","signaccount":"admin","signpassword":"admin","wifi2gssid":"","wifi5gssid":"","wifi2gpsk":"","wifi5gpsk":""}'
       firmwarever:
         description: 'firmware''s version'
         required: true
@@ -83,13 +83,13 @@ on:
         description: 'upload firmware to anonfiles'
         default: 'false'
 env:
-  REPOSITORY_URL: https://github.com/vb1980/padavan-4.4.git
+  REPOSITORY_URL: https://github.com/localhosts-A/padavan-4.4.git
   WORK_PATH: /opt/padavan-4.4
   DEFAULT_FILE: ./user/shared/defaults.h
   DICT_FILE: ./user/www/dict/CN.dict
   TIME_ZONE: Asia/Shanghai
   FIRMWARE_DATEPREFIX: $(date +"%Y%m%d")
-  FIRMWARE_AUTHOR: vb1980
+  FIRMWARE_AUTHOR: CyberDing
   FIRMWARE_PATH: /opt/firmwares
 jobs:
   build:
